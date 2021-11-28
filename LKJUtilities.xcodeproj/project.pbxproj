@@ -14,6 +14,7 @@
 		14B9A5002753F44E007ABEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9A4FF2753F44E007ABEAD /* Assets.xcassets */; };
 		14B9A5032753F44E007ABEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B9A5012753F44E007ABEAD /* LaunchScreen.storyboard */; };
 		14B9A5062753F44E007ABEAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A5052753F44E007ABEAD /* main.m */; };
+		FCCB382A44C055FD93983459 /* Pods_LKJUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CC1CDC422D32F74333AC77 /* Pods_LKJUtilities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		14B9A5022753F44E007ABEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14B9A5042753F44E007ABEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14B9A5052753F44E007ABEAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D21EDD54AC0B7CBA65F4A19 /* Pods-LKJUtilities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKJUtilities.release.xcconfig"; path = "Target Support Files/Pods-LKJUtilities/Pods-LKJUtilities.release.xcconfig"; sourceTree = "<group>"; };
+		95CC1CDC422D32F74333AC77 /* Pods_LKJUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKJUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BE6BFF91843D6F67344DCD /* Pods-LKJUtilities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKJUtilities.debug.xcconfig"; path = "Target Support Files/Pods-LKJUtilities/Pods-LKJUtilities.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCB382A44C055FD93983459 /* Pods_LKJUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DDB5713C10BC69904C9086D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95CC1CDC422D32F74333AC77 /* Pods_LKJUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		14B9A4E72753F44B007ABEAD = {
 			isa = PBXGroup;
 			children = (
 				14B9A4F22753F44B007ABEAD /* LKJUtilities */,
 				14B9A4F12753F44B007ABEAD /* Products */,
+				977C739C189E04E70400CA16 /* Pods */,
+				0DDB5713C10BC69904C9086D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +91,16 @@
 			path = LKJUtilities;
 			sourceTree = "<group>";
 		};
+		977C739C189E04E70400CA16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9BE6BFF91843D6F67344DCD /* Pods-LKJUtilities.debug.xcconfig */,
+				6D21EDD54AC0B7CBA65F4A19 /* Pods-LKJUtilities.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14B9A5092753F44E007ABEAD /* Build configuration list for PBXNativeTarget "LKJUtilities" */;
 			buildPhases = (
+				12E713CD3FF5D612D9B97D8B /* [CP] Check Pods Manifest.lock */,
 				14B9A4EC2753F44B007ABEAD /* Sources */,
 				14B9A4ED2753F44B007ABEAD /* Frameworks */,
 				14B9A4EE2753F44B007ABEAD /* Resources */,
+				E12555342A0CA1D938DAB6FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12E713CD3FF5D612D9B97D8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LKJUtilities-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E12555342A0CA1D938DAB6FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LKJUtilities/Pods-LKJUtilities-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LKJUtilities/Pods-LKJUtilities-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LKJUtilities/Pods-LKJUtilities-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14B9A4EC2753F44B007ABEAD /* Sources */ = {
@@ -289,6 +358,7 @@
 		};
 		14B9A50A2753F44E007ABEAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9BE6BFF91843D6F67344DCD /* Pods-LKJUtilities.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +385,7 @@
 		};
 		14B9A50B2753F44E007ABEAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D21EDD54AC0B7CBA65F4A19 /* Pods-LKJUtilities.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
