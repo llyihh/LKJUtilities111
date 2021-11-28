@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		14B9A4F52753F44B007ABEAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A4F42753F44B007ABEAD /* AppDelegate.m */; };
-		14B9A4F82753F44B007ABEAD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A4F72753F44B007ABEAD /* SceneDelegate.m */; };
 		14B9A4FB2753F44B007ABEAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A4FA2753F44B007ABEAD /* ViewController.m */; };
 		14B9A4FE2753F44B007ABEAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B9A4FC2753F44B007ABEAD /* Main.storyboard */; };
 		14B9A5002753F44E007ABEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9A4FF2753F44E007ABEAD /* Assets.xcassets */; };
@@ -21,8 +20,6 @@
 		14B9A4F02753F44B007ABEAD /* LKJUtilities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LKJUtilities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B9A4F32753F44B007ABEAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14B9A4F42753F44B007ABEAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		14B9A4F62753F44B007ABEAD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		14B9A4F72753F44B007ABEAD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		14B9A4F92753F44B007ABEAD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		14B9A4FA2753F44B007ABEAD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		14B9A4FD2753F44B007ABEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +27,7 @@
 		14B9A5022753F44E007ABEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14B9A5042753F44E007ABEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14B9A5052753F44E007ABEAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14B9A50C2753F6D2007ABEAD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6D21EDD54AC0B7CBA65F4A19 /* Pods-LKJUtilities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKJUtilities.release.xcconfig"; path = "Target Support Files/Pods-LKJUtilities/Pods-LKJUtilities.release.xcconfig"; sourceTree = "<group>"; };
 		95CC1CDC422D32F74333AC77 /* Pods_LKJUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKJUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BE6BFF91843D6F67344DCD /* Pods-LKJUtilities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKJUtilities.debug.xcconfig"; path = "Target Support Files/Pods-LKJUtilities/Pods-LKJUtilities.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,8 +76,6 @@
 			children = (
 				14B9A4F32753F44B007ABEAD /* AppDelegate.h */,
 				14B9A4F42753F44B007ABEAD /* AppDelegate.m */,
-				14B9A4F62753F44B007ABEAD /* SceneDelegate.h */,
-				14B9A4F72753F44B007ABEAD /* SceneDelegate.m */,
 				14B9A4F92753F44B007ABEAD /* ViewController.h */,
 				14B9A4FA2753F44B007ABEAD /* ViewController.m */,
 				14B9A4FC2753F44B007ABEAD /* Main.storyboard */,
@@ -87,6 +83,7 @@
 				14B9A5012753F44E007ABEAD /* LaunchScreen.storyboard */,
 				14B9A5042753F44E007ABEAD /* Info.plist */,
 				14B9A5052753F44E007ABEAD /* main.m */,
+				14B9A50C2753F6D2007ABEAD /* PrefixHeader.pch */,
 			);
 			path = LKJUtilities;
 			sourceTree = "<group>";
@@ -97,7 +94,6 @@
 				F9BE6BFF91843D6F67344DCD /* Pods-LKJUtilities.debug.xcconfig */,
 				6D21EDD54AC0B7CBA65F4A19 /* Pods-LKJUtilities.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +126,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = LKJ;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					14B9A4EF2753F44B007ABEAD = {
@@ -218,7 +215,6 @@
 				14B9A4FB2753F44B007ABEAD /* ViewController.m in Sources */,
 				14B9A4F52753F44B007ABEAD /* AppDelegate.m in Sources */,
 				14B9A5062753F44E007ABEAD /* main.m in Sources */,
-				14B9A4F82753F44B007ABEAD /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -364,6 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LKJUtilities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -371,6 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +389,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LKJUtilities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -398,6 +397,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
